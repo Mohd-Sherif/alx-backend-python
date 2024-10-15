@@ -18,7 +18,3 @@ async def wait_random(max_delay=10):
     wait_time = random.uniform(0, max_delay)
     await asyncio.sleep(wait_time)
     return wait_time
-
-print(asyncio.run(wait_random()))
-print(asyncio.run(wait_random(5)))
-print(asyncio.run(wait_random(15)))
