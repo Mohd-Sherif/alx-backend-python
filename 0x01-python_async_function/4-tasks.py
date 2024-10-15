@@ -18,7 +18,8 @@ async def task_wait_n(n: int, max_delay: int) -> List[float]:
 
     for task in asyncio.as_completed(tasks):
         delay = await task
-        # Insert each completed delay into the correct position in the list (insertion sort style)
+        # Insert each completed delay into the correct position
+        # in the list (insertion sort style)
         for i, d in enumerate(delays):
             if delay < d:
                 delays.insert(i, delay)
